@@ -1,5 +1,5 @@
-#build: `docker build -t atlas-plugin-docker-build  - < Dockerfile`
-#debug: `docker run -it atlas-plugin-docker-build bash`
+#build: `docker build -t thomasjmwb/atlas-plugin-build  - < Dockerfile`
+#debug: `docker run -it thomasjmwb/atlas-plugin-build bash`
 FROM java:8-jdk
 
 # Maintainers on this project are the following:
