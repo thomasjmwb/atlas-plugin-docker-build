@@ -1,12 +1,14 @@
 #build: `docker build -t thomasjmwb/atlas-plugin-build  - < Dockerfile`
 #debug: `docker run -it thomasjmwb/atlas-plugin-build bash`
-FROM openjdk:8-jre
+#deploy: `docker push thomasjmwb/atlas-plugin-build`
+FROM openjdk:8-jdk
 
 # Maintainers on this project are the following:
 MAINTAINER Thomas Whalen-Bridge <thomasjmwb@gmail.com>
 
+# Dependencies for further installs + frontend build
 RUN apt-get update
-RUN apt-get install apt-transport-https curl gnupg -yq 
+RUN apt-get install apt-transport-https curl gnupg g++ build-essential -yq 
 
 
 # get install script and pass it to execute: 
